@@ -6,18 +6,18 @@ BEGIN
 	DECLARE project_id INT;
 	-- get value of id and store it in the project_id variable
 	SELECT id INTO project_id
-	FROM holberton.projects
-	WHERE name LIKE project_name;
+	FROM projects
+	WHERE name = project_name;
 	-- check if value is NULL
 	IF project_id IS NULL THEN
-		INSERT INTO holberton.projects(name)
+		INSERT INTO projects(name)
 		VALUES(project_name);
 		SELECT id INTO project_id
-		FROM holberton.projects
-		WHERE name LIKE project_name;
+		FROM projects
+		WHERE name = project_name;
 	END IF;
 
-	INSERT INTO holberton.corrections
+	INSERT INTO corrections
 	VALUES(user_id, project_id, score);
 
 END
