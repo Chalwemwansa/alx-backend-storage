@@ -1,0 +1,4 @@
+// script inserts values into a given table in mongo 
+db.school.insertOne({
+	"name": "Holberton school"
+	})

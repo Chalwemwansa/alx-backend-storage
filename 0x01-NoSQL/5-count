@@ -1,0 +1,2 @@
+// script that counts the number of entries in the school document in the database passed as an argument
+db.school.find().count()

@@ -1,0 +1,2 @@
+// lists all the objects that in the school collection while the db is passed as an argument
+db.school.find()

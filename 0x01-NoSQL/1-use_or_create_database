@@ -1,0 +1,2 @@
+// script makes a database in mongo db and uses it using the use db command
+use my_db
